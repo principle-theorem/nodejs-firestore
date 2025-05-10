@@ -1,0 +1,11 @@
+import { Status } from 'google-gax';
+import * as proto from '../protos/firestore_v1_proto_api';
+import api = proto.google.firestore.v1;
+export declare function createRequest(requests: api.IWrite[]): api.IBatchWriteRequest;
+export declare function successResponse(updateTimeSeconds: number): api.IBatchWriteResponse;
+export declare function failedResponse(code?: Status): api.IBatchWriteResponse;
+export declare function mergeResponses(responses: api.IBatchWriteResponse[]): api.IBatchWriteResponse;
+export declare function setOp(doc: string, value: string): api.IWrite;
+export declare function updateOp(doc: string, value: string): api.IWrite;
+export declare function createOp(doc: string, value: string): api.IWrite;
+export declare function deleteOp(doc: string): api.IWrite;
